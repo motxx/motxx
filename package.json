@@ -1,1 +1,16 @@
-{ "type": "module", "dependencies": { "@hono/vite-ssg": "^0.0.1", "hono": "^4.0.1", "vite": "^5.1.1" } }
+{
+  "dependencies": {
+    "@hono/vite-dev-server": "^0.5.1",
+    "@hono/vite-ssg": "^0.0.1",
+    "@types/bun": "latest",
+    "vite": "^5.1.1"
+  },
+  "scripts": {
+    "dev": "bunx vite",
+    "build": "bun ./build.ts",
+    "serve": "bunx vite preview",
+    "clean": "rm -rf .hono",
+    "deploy": "bun run build && wrangler pages deploy ./static"
+  },
+  "type": "module"
+}

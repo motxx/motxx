@@ -1,3 +1,0 @@
-name = "pages"
-compatibility_date = "2023-12-01"
-main = "app/server.ts"

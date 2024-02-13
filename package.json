@@ -1,16 +1,23 @@
 {
-  "dependencies": {
-    "@hono/vite-dev-server": "^0.5.1",
+  "name": "pages",
+  "type": "module",
+  "devDependencies": {
     "@hono/vite-ssg": "^0.0.1",
-    "@types/bun": "latest",
-    "vite": "^5.1.1"
+    "@mdx-js/rollup": "^3.0.0",
+    "remark-frontmatter": "^5.0.0",
+    "remark-mdx-frontmatter": "^4.0.0",
+    "vite": "^5.1.1",
+    "wrangler": "^3.28.1"
+  },
+  "dependencies": {
+    "hono": "^4.0.1",
+    "honox": "^0.1.0"
   },
   "scripts": {
-    "dev": "bunx vite",
-    "build": "bun ./build.ts",
-    "serve": "bunx vite preview",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "wrangler pages dev ./dist",
     "clean": "rm -rf .hono",
-    "deploy": "bun run build && wrangler pages deploy ./static"
-  },
-  "type": "module"
+    "deploy": "bun run build && wrangler pages deploy ./dist"
+  }
 }

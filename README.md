@@ -1,14 +1,23 @@
 # pages
 
-## Development
+## Installation
 
 ```
 bun i
 ```
 
+## Development
+
+```
+bun run dev
+```
+
+```
+bun run build
+```
+
 ## Deployment
 
 ```
-bunx --bun vite build
-wrangler pages deploy ./dist
+bun run deploy
 ```
